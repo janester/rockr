@@ -1,0 +1,11 @@
+= link_to('New Venue', new_venue_path, :remote => true)
+= link_to("New Show", new_show_path, :remote => true)
+#venue_form
+#show_form
+#venues
+  -@venues.each do |venue|
+    %div= venue.name
+    -venue.shows.each do |show|
+      %div
+      %span= show.date
+      %span= show.artist

@@ -1,0 +1,6 @@
+-@venues.each do |venue|
+  %div= venue.name
+  -venue.shows.each do |show|
+    %div
+    %span= show.date
+    %span= show.artist
